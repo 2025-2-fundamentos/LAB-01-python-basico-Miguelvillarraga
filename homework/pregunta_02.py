@@ -19,7 +19,7 @@ def pregunta_02():
 
     with open("files/input/data.csv", "r") as file:
         for linea in file:
-            columnas = linea.strip().split(",")
+            columnas = linea.strip().split()
             letra = columnas[0]
 
             if letra not in conteo:
