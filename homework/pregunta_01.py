@@ -17,7 +17,7 @@ def pregunta_01():
     suma = 0
     with open("files/input/data.csv", "r") as file:
         for linea in file:
-            columnas = linea.strip().split(",")
+            columnas = linea.strip().split()
             suma += int(columnas[1])
 
     return suma
