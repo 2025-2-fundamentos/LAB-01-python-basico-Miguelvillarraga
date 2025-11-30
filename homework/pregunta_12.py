@@ -15,3 +15,14 @@ def pregunta_12():
     {'A': 177, 'B': 187, 'C': 114, 'D': 136, 'E': 324}
 
     """
+    resultado = {}
+    with open("files/input/data.csv", "r") as archivo:
+        for linea in archivo:
+            columnas = linea.strip().split("\t")
+            letra_columna_1 = columnas[0]
+            suma_columna_5 = sum(int(valor.split(":")[1]) for valor in columnas[4].split(","))
+            if letra_columna_1 in resultado:
+                resultado[letra_columna_1] += suma_columna_5
+            else:
+                resultado[letra_columna_1] = suma_columna_5
+    return resultado
