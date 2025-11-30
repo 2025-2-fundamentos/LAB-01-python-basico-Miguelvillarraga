@@ -30,7 +30,7 @@ def pregunta_06():
 
     with open("files/input/data.csv", "r") as file:
         for linea in file:
-            columnas = linea.strip().split(",")
+            columnas = linea.strip().split()
             col5 = columnas[4]
             pares = col5.split(",")
 
